@@ -38,9 +38,9 @@ namespace Discuss_Music
                     {
                         int userId = (int)command.ExecuteScalar();
                         message = "Success!";
-                        Response.Redirect("Home.aspx");
                         Session["Id"] = userId;
-
+                        Response.Redirect("Feed.aspx");
+                        
                     }
 
                     catch (SqlException)

@@ -14,7 +14,7 @@
         }
 
         body {
-            background-color: mediumpurple
+            background-color: #e6f9ff
         }
 
         table {
@@ -82,6 +82,10 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
+        input { 
+            text-align: center; 
+        }
     </style>
 </head>
 <body>
@@ -90,7 +94,8 @@
          <h1>Discuss-Music</h1>
     <ul>
 
-        <li><a href="Home.aspx">Home</a></li>
+        <li><a href="Feed.aspx">Feed</a></li>
+        <li><a href="NewArticle.aspx">New</a></li>
         <li><a href="Sign-In.aspx">Sign-Out</a></li>
     </ul>
 </body>
