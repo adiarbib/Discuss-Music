@@ -7,6 +7,8 @@
 
     <p>Hello <%= userName %></p>
 
+    <%=insideBody %>
+
     
 
 

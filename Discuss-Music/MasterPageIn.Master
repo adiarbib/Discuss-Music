@@ -89,8 +89,7 @@
     </style>
 </head>
 <body>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            
          <h1>Discuss-Music</h1>
     <ul>
 
@@ -98,5 +97,7 @@
         <li><a href="NewArticle.aspx">New</a></li>
         <li><a href="Sign-In.aspx">Sign-Out</a></li>
     </ul>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
 </body>
 </html>

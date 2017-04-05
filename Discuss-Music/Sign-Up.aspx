@@ -43,7 +43,7 @@
             return true;
         }
         </script>
-    <h2>Sign-Up</h2>
+    <h2>Sign Up</h2>
 
     <p><%= message %></p><br />
 
