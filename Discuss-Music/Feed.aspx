@@ -3,6 +3,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <ul>
+
+        <li><a class="current" href="Feed.aspx">Feed</a></li>
+        <li><a href="NewArticle.aspx">New</a></li>
+        <li><a href="MyProfile.aspx">My Profile</a></li>
+        <li><a href="Sign-In.aspx">Sign Out</a></li>
+
+    </ul>
+
     <h2>Feed</h2>
 
     <p>Hello <%= userName %></p>

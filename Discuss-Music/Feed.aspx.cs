@@ -73,7 +73,7 @@ namespace Discuss_Music
 
                 SqlDataReader reader3 = command1.ExecuteReader();
                 int widthOfTitle = 150;
-                int widthOfDate = 30;
+                int widthOfDate = 20;
                 string title = "";
                 int fontSize = 3;
                 string color = "#006666"; //blueish
@@ -94,7 +94,7 @@ namespace Discuss_Music
 	                                    <col width="+ "{0}" + @">
                                         <col width = "+ "{1}" + @">
                                     <tr>
-                                        <th>{2}<font size=" + "{3}" + " color="+ "{4}>" + @"/ {5}</font></th>
+                                        <th>{2}<font size=" + "{3}" + " color="+ "{4}>" + @" /{5}</font></th>
                                         <th>" + "{6}" + @" </ th >
                                     </tr>
                                     <tr>

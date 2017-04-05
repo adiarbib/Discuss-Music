@@ -3,7 +3,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <h3>Add a new post</h3>
+    <ul>
+
+        <li><a href="Feed.aspx">Feed</a></li>
+        <li><a class="current" href="NewArticle.aspx">New</a></li>
+        <li><a href="MyProfile.aspx">My Profile</a></li>
+        <li><a href="Sign-In.aspx">Sign Out</a></li>
+
+    </ul>
+
+    <h2>Add a new post</h2>
+    <p><%= message %></p><br />
     <form id="newPost" runat="server" onsubmit="return true" >
 
         <div class="container">

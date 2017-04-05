@@ -43,6 +43,14 @@
             return true;
         }
         </script>
+
+    <ul>
+
+        <li><a class="current" href="Sign-Up.aspx">Sign Up</a></li>
+        <li><a href="Sign-In.aspx">Sign In</a></li>
+
+    </ul>
+
     <h2>Sign Up</h2>
 
     <p><%= message %></p><br />

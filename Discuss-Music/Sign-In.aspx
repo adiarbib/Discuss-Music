@@ -3,6 +3,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <ul>
+
+        <li><a href="Sign-Up.aspx">Sign Up</a></li>
+        <li><a class="current" href="Sign-In.aspx">Sign In</a></li>
+
+    </ul>
+
     <h2>Sign In</h2>
 
     <p><%= message %></p><br />

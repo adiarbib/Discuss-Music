@@ -70,6 +70,7 @@
       <DependentUpon>CoolestDatabaseEver.mdf</DependentUpon>
     </Content>
     <Content Include="Feed.aspx" />
+    <Content Include="MyProfile.aspx" />
     <Content Include="NewArticle.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
@@ -109,6 +110,13 @@
     </Compile>
     <Compile Include="MasterPageIn.Master.designer.cs">
       <DependentUpon>MasterPageIn.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewArticle.aspx.cs">
       <DependentUpon>NewArticle.aspx</DependentUpon>
