@@ -10,7 +10,7 @@ namespace Discuss_Music
 {
     public partial class NewArticle : System.Web.UI.Page
     {
-        public string message = "";
+        //public string message = "";
         private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\User\\documents\\visual studio 2017\\Projects\\Discuss-Music\\Discuss-Music\\App_Data\\CoolestDatabaseEver.mdf\";Integrated Security=True";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -19,11 +19,15 @@ namespace Discuss_Music
             {
                 string title = Request.Form["title"];
                 string content = Request.Form["content"];
-                int writerId = (int)Session["Id"];
                 DateTime date = DateTime.Now;
                 SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
                 SqlCommand command = connection.CreateCommand();
+                int writerId = 0;
+                if (Session["Id"] != null)
+                {
+                    writerId = (int)Session["Id"];
+                }
                 command.CommandText = String.Format("INSERT INTO Articles VALUES ('{0}','{1}','{2}','{3}');", title, content, writerId, date);
                 command.ExecuteNonQuery();
                 connection.Close();

@@ -35,6 +35,10 @@ namespace Discuss_Music
                 reader.Close();
                 connection.Close();
             }
+            else
+            {
+                userName = "Guest";
+            }
 
             if(Request.HttpMethod=="GET")
             {
@@ -87,16 +91,16 @@ namespace Discuss_Music
 
                     insideBody += 
                     String.Format(@"<table> 
-	                                    <col width="+ "'{0}'" + @">
-                                        < col width = "+ "'{1}'" + @" >
-                                    < tr >
-                                        <th>'{2}'<font size=" + "'{3}'" + " color="+ "'{4}'>" + @"/ '{5}'</font></th>
-                                        <th>" + "'{6}'" + @" </ th >
-                                    </ tr >
-                                    < tr >
-                                         < td colspan = "+"2"+ @" > '{7}'</ td >
-                                    </ tr >
-                                    </ table > ",widthOfTitle,widthOfDate,title,fontSize,color,username,date,content);
+	                                    <col width="+ "{0}" + @">
+                                        <col width = "+ "{1}" + @">
+                                    <tr>
+                                        <th>{2}<font size=" + "{3}" + " color="+ "{4}>" + @"/ {5}</font></th>
+                                        <th>" + "{6}" + @" </ th >
+                                    </tr>
+                                    <tr>
+                                         <td colspan = 2> {7}</td>
+                                    </tr>
+                                    </table> <br>", widthOfTitle,widthOfDate,title,fontSize,color,username,date,content);
                     count++;
                 }
                 reader3.Close();
