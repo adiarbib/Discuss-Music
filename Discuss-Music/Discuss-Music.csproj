@@ -73,6 +73,7 @@
     <Content Include="NewArticle.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
+    <Content Include="Profile.aspx" />
     <Content Include="Sign-In.aspx" />
     <Content Include="Sign-Up.aspx" />
     <Content Include="WebForm1.aspx" />
@@ -115,6 +116,13 @@
     </Compile>
     <Compile Include="NewArticle.aspx.designer.cs">
       <DependentUpon>NewArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sign-In.aspx.cs">

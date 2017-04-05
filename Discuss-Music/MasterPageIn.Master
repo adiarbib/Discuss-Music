@@ -48,7 +48,7 @@
             display: block;
             color: white;
             text-align: center;
-            padding: 8px 200px;
+            padding: 8px 140px;
             text-decoration: none;
         }
 
@@ -110,7 +110,8 @@
 
         <li><a href="Feed.aspx">Feed</a></li>
         <li><a href="NewArticle.aspx">New</a></li>
-        <li><a href="Sign-In.aspx">Sign-Out</a></li>
+        <li><a href="Profile.aspx">My Profile</a></li>
+        <li><a href="Sign-In.aspx">Sign Out</a></li>
     </ul>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
