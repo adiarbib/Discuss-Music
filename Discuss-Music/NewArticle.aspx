@@ -25,7 +25,7 @@
 
 			<div class="form-group">
                 <p>Content: </p>
-				<input type="text" name="content" id="content" placeholder="content" class="form-control" size="80" maxlength="100"> <br>
+				<input type="text" rows="5" name="content" id="content" placeholder="content" class="form-control"  > <br>
 			</div>
 
 			<input type="submit" id="submit" value="Post It" class="btn btn-primary">

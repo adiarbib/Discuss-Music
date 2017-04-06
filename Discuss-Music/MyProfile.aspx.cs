@@ -17,6 +17,7 @@ namespace Discuss_Music
         public string name;
         public DateTime birthday;
         private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\User\\documents\\visual studio 2017\\Projects\\Discuss-Music\\Discuss-Music\\App_Data\\CoolestDatabaseEver.mdf\";Integrated Security=True";
+        public string insideBody = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,7 +38,7 @@ namespace Discuss_Music
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    username = reader.GetString(1);
+                    //username = reader.GetString(1);
                     password = reader.GetString(2);
                     phoneNumber = reader.GetString(3);
                     email = reader.GetString(4);
@@ -45,6 +46,41 @@ namespace Discuss_Music
                     birthday = reader.GetDateTime(6);
                 }
                 reader.Close();
+
+                SqlCommand command1 = connection.CreateCommand();
+                command1.CommandText = "SELECT * FROM Articles WHERE Id = '" + Session["Id"] + "' ORDER BY Date DESC;";
+                SqlDataReader reader3 = command1.ExecuteReader();
+                int widthOfTitle = 150;
+                int widthOfDate = 20;
+                string title = "";
+                int fontSize = 3;
+                string color = "#006666"; //blueish
+                string username = "";
+                DateTime date = new DateTime();
+                string content = "";
+                int count = 0;
+
+                while (reader3.Read())
+                {
+                    title = reader3.GetString(1);
+                    content = reader3.GetString(2);
+                    date = reader3.GetDateTime(4);
+
+                    insideBody +=
+                    String.Format(@"<table> 
+	                                    <col width=" + "{0}" + @">
+                                        <col width = " + "{1}" + @">
+                                    <tr>
+                                        <th>{2}<font size=" + "{3}" + " color=" + "{4}>" + @" /{5}</font></th>
+                                        <th>" + "{6}" + @" </ th >
+                                    </tr>
+                                    <tr>
+                                         <td colspan = 2> {7}</td>
+                                    </tr>
+                                    </table> <br>", widthOfTitle, widthOfDate, title, fontSize, color, username, date, content);
+                    count++;
+                }
+                reader3.Close();
                 connection.Close();
             }
     

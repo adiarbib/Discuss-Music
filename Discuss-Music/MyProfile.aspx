@@ -25,7 +25,11 @@
     <h2><%=password %></h2>
     <h2><%=phoneNumber %></h2>
     <h2><%=email %></h2>
-    <h2><%=birthday %></h2>
+    <h2><%=birthday %></h2><br />
+    <h2>All Posts:</h2><br />
+    <%=insideBody %>
+
+
 
 
 

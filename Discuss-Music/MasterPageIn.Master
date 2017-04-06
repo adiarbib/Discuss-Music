@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageIn.master.cs" Inherits="Discuss_Music.MasterPageIn" %>
+﻿x<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageIn.master.cs" Inherits="Discuss_Music.MasterPageIn" %>
 
 <!DOCTYPE html>
 
@@ -7,6 +7,8 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
       <style type="text/css">
         h1, h2, h3, h4 {
             text-align: center;
@@ -14,7 +16,9 @@
         }
 
         body {
-            background-color: #e6f9ff
+            background-color: #e6f9ff;
+            font-family:"Open Sans";
+            
         }
 
         table {
@@ -23,17 +27,13 @@
             width: 50%;
             margin-left: auto;
             margin-right: auto;
-            font-family: arial, sans-serif;
             border-collapse: collapse;
-            /*width: 100%;*/
         }
 
         td, th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
-            /*text-wrap: normal;*/
-            /*word-wrap: break-word;*/
         }
 
         tr:nth-child(even) {
@@ -58,7 +58,7 @@
         }
 
             li a:hover {
-                background-color: #111;
+                background-color: #eb2d53;
             }
 
         ul {
