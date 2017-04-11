@@ -106,6 +106,10 @@ namespace Discuss_Music
                 reader3.Close();
                 connection.Close();
             }
+            else
+            {
+
+            }
         }
     }
 }

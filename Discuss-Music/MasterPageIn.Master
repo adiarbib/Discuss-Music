@@ -74,13 +74,13 @@
             color:whitesmoke;
         }
 
-        #title {
+        /*#title {
             height: 140%
         }
 
         #post {
             height: 100%
-        }
+        }*/
 
         div {
             border-radius: 5px;

@@ -27,6 +27,7 @@ namespace Discuss_Music
             email = "Email";
             name = "Guest";
             birthday = DateTime.Now;
+            
 
             if (Session["Id"] != null)
             {
@@ -36,9 +37,10 @@ namespace Discuss_Music
                 SqlCommand command = connection.CreateCommand();
                 command.CommandText = "SELECT * FROM People WHERE Id = '" + Session["Id"] + "';";
                 SqlDataReader reader = command.ExecuteReader();
+                
                 if (reader.Read())
                 {
-                    //username = reader.GetString(1);
+                    username = reader.GetString(1);
                     password = reader.GetString(2);
                     phoneNumber = reader.GetString(3);
                     email = reader.GetString(4);
@@ -55,10 +57,9 @@ namespace Discuss_Music
                 string title = "";
                 int fontSize = 3;
                 string color = "#006666"; //blueish
-                string username = "";
                 DateTime date = new DateTime();
                 string content = "";
-                int count = 0;
+                
 
                 while (reader3.Read())
                 {
@@ -78,7 +79,7 @@ namespace Discuss_Music
                                          <td colspan = 2> {7}</td>
                                     </tr>
                                     </table> <br>", widthOfTitle, widthOfDate, title, fontSize, color, username, date, content);
-                    count++;
+                    
                 }
                 reader3.Close();
                 connection.Close();

@@ -3,6 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <ul>
 
         <li><a href="Feed.aspx">Feed</a></li>
@@ -20,12 +23,12 @@
 
 			<div class="form-group">
                 <p>Title: </p>
-				<input type="text" name="title" id="title" placeholder="title" class="form-control" size="80"> <br>
+				<input type="text" name="title" id="title" placeholder="title" class="form-control" > <br>
 			</div>
 
 			<div class="form-group">
                 <p>Content: </p>
-				<input type="text" rows="5" name="content" id="content" placeholder="content" class="form-control"  > <br>
+				<input type="text" rows="5" name="content" id="content" placeholder="content" class="form-control" > <br>
 			</div>
 
 			<input type="submit" id="submit" value="Post It" class="btn btn-primary">

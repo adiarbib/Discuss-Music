@@ -26,8 +26,7 @@ namespace Discuss_Music
                     SqlConnection connection = new SqlConnection(connectionString);
                     connection.Open();
                     SqlCommand command = connection.CreateCommand();
-                    int writerId = 0;
-                    writerId = (int)Session["Id"];
+                    int writerId = (int)Session["Id"];
                     command.CommandText = String.Format("INSERT INTO Articles VALUES ('{0}','{1}','{2}','{3}');", title, content, writerId, date);
                     command.ExecuteNonQuery();
                     connection.Close();
