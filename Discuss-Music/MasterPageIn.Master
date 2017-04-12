@@ -94,12 +94,23 @@
             cursor: pointer;
         }
 
+        .edit{
+            width: 18%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
         input { 
             text-align: center;
             font-size:20px;
             width:450px;
         }
-        input[type=text] {
+        input[type=text],input[type=password],input[type=tel],input[type=email] {
             width: 250px;
             box-sizing: border-box;
             border: 2px solid #ccc;
@@ -114,7 +125,7 @@
             transition: width 0.4s ease-in-out;
         }
 
-        input[type=text]:focus {
+        input[type=text]:focus,input[type=password]:focus,input[type=tel]:focus,input[type=email]:focus {
             width: 100%;
         }
     </style>

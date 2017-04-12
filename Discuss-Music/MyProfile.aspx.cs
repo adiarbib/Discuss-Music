@@ -21,54 +21,55 @@ namespace Discuss_Music
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            username = "Username";
-            password = "Password";
-            phoneNumber = "Phone Number";
-            email = "Email";
-            name = "Guest";
-            birthday = DateTime.Now;
-            
-
-            if (Session["Id"] != null)
+            if (Request.HttpMethod == "GET")
             {
-                //when I press on sign in
-                SqlConnection connection = new SqlConnection(connectionString);
-                connection.Open();
-                SqlCommand command = connection.CreateCommand();
-                command.CommandText = "SELECT * FROM People WHERE Id = '" + Session["Id"] + "';";
-                SqlDataReader reader = command.ExecuteReader();
-                
-                if (reader.Read())
+                username = "Username";
+                password = "Password";
+                phoneNumber = "Phone Number";
+                email = "Email";
+                name = "Guest";
+                birthday = DateTime.Now;
+
+                if (Session["Id"] != null)
                 {
-                    username = reader.GetString(1);
-                    password = reader.GetString(2);
-                    phoneNumber = reader.GetString(3);
-                    email = reader.GetString(4);
-                    name = reader.GetString(5);
-                    birthday = reader.GetDateTime(6);
-                }
-                reader.Close();
+                    //when I press on sign in
+                    SqlConnection connection = new SqlConnection(connectionString);
+                    connection.Open();
+                    SqlCommand command = connection.CreateCommand();
+                    command.CommandText = "SELECT * FROM People WHERE Id = '" + Session["Id"] + "';";
+                    SqlDataReader reader = command.ExecuteReader();
 
-                SqlCommand command1 = connection.CreateCommand();
-                command1.CommandText = "SELECT * FROM Articles WHERE WriterId = '" + Session["Id"] + "' ORDER BY Date DESC;";
-                SqlDataReader reader3 = command1.ExecuteReader();
-                int widthOfTitle = 150;
-                int widthOfDate = 20;
-                string title = "";
-                int fontSize = 3;
-                string color = "#006666"; //blueish
-                DateTime date = new DateTime();
-                string content = "";
-                
+                    if (reader.Read())
+                    {
+                        username = reader.GetString(1);
+                        password = reader.GetString(2);
+                        phoneNumber = reader.GetString(3);
+                        email = reader.GetString(4);
+                        name = reader.GetString(5);
+                        birthday = reader.GetDateTime(6);
+                    }
+                    reader.Close();
 
-                while (reader3.Read())
-                {
-                    title = reader3.GetString(1);
-                    content = reader3.GetString(2);
-                    date = reader3.GetDateTime(4);
+                    SqlCommand command1 = connection.CreateCommand();
+                    command1.CommandText = "SELECT * FROM Articles WHERE WriterId = '" + Session["Id"] + "' ORDER BY Date DESC;";
+                    SqlDataReader reader3 = command1.ExecuteReader();
+                    int widthOfTitle = 150;
+                    int widthOfDate = 20;
+                    string title = "";
+                    int fontSize = 3;
+                    string color = "#006666"; //blueish
+                    DateTime date = new DateTime();
+                    string content = "";
 
-                    insideBody +=
-                    String.Format(@"<table> 
+
+                    while (reader3.Read())
+                    {
+                        title = reader3.GetString(1);
+                        content = reader3.GetString(2);
+                        date = reader3.GetDateTime(4);
+
+                        insideBody +=
+                        String.Format(@"<table> 
 	                                    <col width=" + "{0}" + @">
                                         <col width = " + "{1}" + @">
                                     <tr>
@@ -79,12 +80,17 @@ namespace Discuss_Music
                                          <td colspan = 2> {7}</td>
                                     </tr>
                                     </table> <br>", widthOfTitle, widthOfDate, title, fontSize, color, username, date, content);
-                    
+
+                    }
+                    reader3.Close();
+                    connection.Close();
                 }
-                reader3.Close();
-                connection.Close();
             }
-    
+
+            else if(Request.HttpMethod == "POST")
+            {
+
+            }
 
         }
     }

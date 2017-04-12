@@ -10,7 +10,6 @@
 
     <script>
 
-
         function validateForm() {
 
             var form = document.forms["signUp"];
@@ -39,6 +38,9 @@
                 alert("Phone number should be only digits!!!!!!!!");
                 return false;
             }
+
+            else if (!checkedValue)
+                return false;
 
             return true;
         }

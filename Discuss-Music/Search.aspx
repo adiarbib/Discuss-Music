@@ -33,7 +33,7 @@
         </div>
     </form>
 
-    <h2>Search found:</h2><br />
+    
 
     <%=insideBody %>
 

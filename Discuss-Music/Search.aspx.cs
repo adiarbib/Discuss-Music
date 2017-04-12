@@ -18,6 +18,7 @@ namespace Discuss_Music
             
             if (Request.HttpMethod == "POST")
             {
+                insideBody += "<h2>Search found:</h2><br />";
                 string search = Request.Form["search"];
                 SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
