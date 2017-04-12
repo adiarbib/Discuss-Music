@@ -72,8 +72,8 @@ namespace Discuss_Music
                     string title = search;
                     int fontSize = 3;
                     string color = "#006666"; //blueish
-                    string content = reader2.GetString(2);
-                    DateTime date = reader2.GetDateTime(4);
+                    string content = reader3.GetString(2);
+                    DateTime date = reader3.GetDateTime(4);
 
                     insideBody +=
                     String.Format(@"<table> 

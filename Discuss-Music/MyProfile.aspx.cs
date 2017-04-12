@@ -27,6 +27,7 @@ namespace Discuss_Music
             email = "Email";
             name = "Guest";
             birthday = DateTime.Now;
+            int id = (int)Session["Id"];
             
 
             if (Session["Id"] != null)
@@ -50,7 +51,7 @@ namespace Discuss_Music
                 reader.Close();
 
                 SqlCommand command1 = connection.CreateCommand();
-                command1.CommandText = "SELECT * FROM Articles WHERE Id = '" + Session["Id"] + "' ORDER BY Date DESC;";
+                command1.CommandText = "SELECT * FROM Articles WHERE WriterId = '" + Session["Id"] + "' ORDER BY Date DESC;";
                 SqlDataReader reader3 = command1.ExecuteReader();
                 int widthOfTitle = 150;
                 int widthOfDate = 20;

@@ -21,7 +21,7 @@
 
     </ul><br />
 
-    <form>
+    <form id="searchForm" runat="server" onsubmit="return true">
         
         <div class="container">
 
