@@ -11,6 +11,7 @@
         <li><a href="Feed.aspx">Feed</a></li>
         <li><a class="current" href="NewArticle.aspx">New</a></li>
         <li><a href="MyProfile.aspx">My Profile</a></li>
+        <li><a href="Search.aspx">Search</a></li>
         <li><a href="Sign-In.aspx">Sign Out</a></li>
 
     </ul>
@@ -28,7 +29,7 @@
 
 			<div class="form-group">
                 <p>Content: </p>
-				<input type="text" rows="5" name="content" id="content" placeholder="content" class="form-control" > <br>
+				<input type="text" name="content" id="content" placeholder="content" class="form-control" > <br>
 			</div>
 
 			<input type="submit" id="submit" value="Post It" class="btn btn-primary">

@@ -8,6 +8,7 @@
         <li><a class="current" href="Feed.aspx">Feed</a></li>
         <li><a href="NewArticle.aspx">New</a></li>
         <li><a href="MyProfile.aspx">My Profile</a></li>
+        <li><a href="Search.aspx">Search</a></li>
         <li><a href="Sign-In.aspx">Sign Out</a></li>
 
     </ul>
