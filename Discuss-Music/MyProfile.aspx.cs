@@ -16,7 +16,7 @@ namespace Discuss_Music
         public string email;
         public string name;
         public DateTime birthday;
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\User\\documents\\visual studio 2017\\Projects\\Discuss-Music\\Discuss-Music\\App_Data\\CoolestDatabaseEver.mdf\";Integrated Security=True";
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"|DataDirectory|\\CoolestDatabaseEver.mdf\";Integrated Security=True";
         public string insideBody = "";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -27,7 +27,6 @@ namespace Discuss_Music
             email = "Email";
             name = "Guest";
             birthday = DateTime.Now;
-            int id = (int)Session["Id"];
             
 
             if (Session["Id"] != null)

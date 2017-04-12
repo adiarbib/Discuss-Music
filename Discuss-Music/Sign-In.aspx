@@ -9,15 +9,15 @@
 
     <ul>
 
+        <li><a href="Welcome.aspx">Introduction</a></li>
         <li><a href="Sign-Up.aspx">Sign Up</a></li>
         <li><a class="current" href="Sign-In.aspx">Sign In</a></li>
 
     </ul>
 
-    <h2>Sign In</h2>
+    <h2>Sign In</h2><br />
 
-    <p><%= message %></p><br />
-
+    <p><%=message %></p>
 
     <form id="signIn" runat="server" onsubmit="return true" >
 

@@ -78,6 +78,7 @@
     <Content Include="Sign-In.aspx" />
     <Content Include="Sign-Up.aspx" />
     <Content Include="MasterPageIn.Master" />
+    <Content Include="Welcome.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -147,6 +148,13 @@
       <DependentUpon>Sign-Up.aspx</DependentUpon>
     </Compile>
     <Compile Include="SqlHelper.cs" />
+    <Compile Include="Welcome.aspx.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Welcome.aspx.designer.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

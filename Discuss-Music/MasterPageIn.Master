@@ -121,7 +121,7 @@
 </head>
 <body>
             
-         <h1>Discuss-Music</h1>
+         <h1>Discuss Music</h1>
     
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
