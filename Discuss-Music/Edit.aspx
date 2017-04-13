@@ -54,7 +54,7 @@
     <p><%= message %></p><br />
 
 
-    <form id="signUp" runat="server" onsubmit="return validateForm();" >
+    <form id="edit" runat="server" onsubmit="return validateForm();" >
 
         <div class="container">
 

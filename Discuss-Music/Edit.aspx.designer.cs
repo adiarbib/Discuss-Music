@@ -13,12 +13,12 @@ namespace Discuss_Music {
     public partial class Edit {
         
         /// <summary>
-        /// signUp control.
+        /// edit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm signUp;
+        protected global::System.Web.UI.HtmlControls.HtmlForm edit;
     }
 }
