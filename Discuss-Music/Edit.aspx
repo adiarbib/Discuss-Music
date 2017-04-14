@@ -8,7 +8,7 @@
 
         function validateForm() {
 
-            var form = document.forms["signUp"];
+            var form = document.forms["edit"];
             var username = form["username"].value;
             var password = form["password"].value;
             var secondPassword = form["secondPassword"].value;

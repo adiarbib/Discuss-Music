@@ -24,28 +24,31 @@ namespace Discuss_Music
 
             if (Request.HttpMethod == "POST")
             {
-                username = Request.Form["username"];
-                password = Request.Form["password"];
-                name = Request.Form["name"];
-                birthday = DateTime.Parse(Request.Form["birthday"]);
-                email = Request.Form["email"];
-                phoneNumber = Request.Form["phoneNumber"];
-                SqlConnection connection = new SqlConnection(connectionString);
-                connection.Open();
-                SqlCommand command = connection.CreateCommand();
-                command.CommandText = String.Format("UPDATE People SET Username = '{0}',Password = '{1}',PhoneNumber = '{2}',Email = '{3}',Name = '{4}',Birthday = '{5}' WHERE Id = '" + Session["Id"] + "';", username, password, phoneNumber, email, name, birthday);
-                try
+                if(Session["Id"] != null)
                 {
-                    command.ExecuteNonQuery();
-                    message = "Success!";
-                    Response.Redirect("MyProfile.aspx");
+                    username = Request.Form["username"];
+                    password = Request.Form["password"];
+                    name = Request.Form["name"];
+                    birthday = DateTime.Parse(Request.Form["birthday"]);
+                    email = Request.Form["email"];
+                    phoneNumber = Request.Form["phoneNumber"];
+                    SqlConnection connection = new SqlConnection(connectionString);
+                    connection.Open();
+                    SqlCommand command = connection.CreateCommand();
+                    command.CommandText = String.Format("UPDATE People SET Username = '{0}',Password = '{1}',PhoneNumber = '{2}',Email = '{3}',Name = '{4}',Birthday = '{5}' WHERE Id = '" + Session["Id"] + "';", username, password, phoneNumber, email, name, birthday);
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        message = "Success!";
+                        Response.Redirect("MyProfile.aspx");
 
+                    }
+                    catch (SqlException)
+                    {
+                        message = "User already exist :(";
+                    }
+                    connection.Close();
                 }
-                catch (SqlException)
-                {
-                    message = "User already exist :(";
-                }
-                connection.Close();
             }
 
             else if(Request.HttpMethod == "GET")
@@ -59,7 +62,6 @@ namespace Discuss_Music
 
                 if (Session["Id"] != null)
                 {
-                    //when I press on sign in
                     SqlConnection connection = new SqlConnection(connectionString);
                     connection.Open();
                     SqlCommand command = connection.CreateCommand();
