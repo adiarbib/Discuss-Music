@@ -103,6 +103,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            text-align:center;
         }
 
         input { 
@@ -136,5 +137,7 @@
     
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
+
+    <p>Give us a thumbs up in our <a href="https://www.facebook.com/Discuss-Music-1218682134925885/">Facebook page</a> </p>
 </body>
 </html>

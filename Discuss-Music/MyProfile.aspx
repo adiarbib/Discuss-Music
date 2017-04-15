@@ -28,7 +28,7 @@
     <div class="edit">
         <a href="Edit.aspx" class="btn btn-default">Edit Details</a>
     </div>
-    <h3>Name: <%=name %></h3><br />
+    <h3>Name: <%=name %></h3>
     <h3>Username: <%=username %></h3>
     <h3>Password: <%=password %></h3>
     <h3>Phone Number: <%=phoneNumber %></h3>

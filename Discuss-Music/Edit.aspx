@@ -5,15 +5,13 @@
 
     <script>
 
-
-        function validateForm() {
+        function validateForm1() {
 
             var form = document.forms["edit"];
             var username = form["username"].value;
             var password = form["password"].value;
             var secondPassword = form["secondPassword"].value;
             var phoneNumber = form["phoneNumber"].value;
-            var checkedValue = form["checkBox"].checked;
 
             if (username.length < 8) {
                 alert("Username is too short");
@@ -37,7 +35,7 @@
 
             return true;
         }
-        </script>
+      </script>
 
     <ul>
 
@@ -54,7 +52,7 @@
     <p><%= message %></p><br />
 
 
-    <form id="edit" runat="server" onsubmit="return validateForm();" >
+    <form id="edit" runat="server" onsubmit="return validateForm1();" >
 
         <div class="container">
 
@@ -79,14 +77,14 @@
 			</div>
 
 			<div class="form-group">
-				<input type="date" name="birthday" id="birthday" value=<%=birthday %> min="1970-01-01" max="2007-01-01" class="form-control" ><br>
+				<input type="date" name="birthday" id="birthday" value=<%=birthday_string %> class="form-control" ><br>
 			</div>
 
 			<div class="form-group">
 				<input type="email" name="email" id="email" placeholder="enter mail" value=<%=email %> class="form-control" size="165"> <br>
 			</div>
 
-			<input type="submit" id="submit" value="Submit" class="btn btn-primary">
+			<input type="submit" id="submit" value="Save" class="btn btn-primary">
 			<input type="reset">
 		</div>
     </form>

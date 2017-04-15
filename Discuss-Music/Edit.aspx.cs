@@ -16,6 +16,7 @@ namespace Discuss_Music
         public string password = "";
         public string name = "";
         public DateTime birthday = DateTime.Now;
+        public string birthday_string = "";
         public string email = "";
         public string phoneNumber = "";
 
@@ -59,6 +60,7 @@ namespace Discuss_Music
                 email = "Email";
                 name = "Guest";
                 birthday = DateTime.Now;
+                birthday_string = birthday.Year + "-" + birthday.Month + "-" + birthday.Day;
 
                 if (Session["Id"] != null)
                 {
@@ -76,8 +78,11 @@ namespace Discuss_Music
                         email = reader.GetString(4);
                         name = reader.GetString(5);
                         birthday = reader.GetDateTime(6);
+                        birthday_string = birthday.Year + "-" + birthday.Month + "-" + birthday.Day;
+                        
                     }
                     reader.Close();
+                    connection.Close();
                 }
 
             }

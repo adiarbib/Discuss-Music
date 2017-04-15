@@ -84,7 +84,7 @@
 			</div>
 
 			<div class="form-group">
-				<input type="date" name="birthday" id="birthday" min="1970-01-01" max="2007-01-01" class="form-control" ><br>
+				<input type="date" name="birthday" id="birthday" class="form-control" ><br>
 			</div>
 
 			<div class="form-group">

@@ -24,12 +24,8 @@ namespace Discuss_Music
                     DateTime birthday = DateTime.Parse(Request.Form["birthday"]);
                     string email = Request.Form["email"];
                     string phoneNumber = Request.Form["phoneNumber"];
-
-
-                    //when I press on submit
                     SqlConnection connection = new SqlConnection(connectionString);
                     connection.Open();
-
                     SqlCommand command = connection.CreateCommand();
                     command.CommandText = String.Format("INSERT INTO People OUTPUT INSERTED.ID VALUES ('{0}','{1}','{2}','{3}','{4}','{5}');", username, password, phoneNumber, email, name, birthday);
                     //if unique it may throw an exception
@@ -45,7 +41,6 @@ namespace Discuss_Music
 
                     catch (SqlException)
                     {
-                        //should write beside the username that the user already exist
                         message = "User already exist :(";
                     }
 
