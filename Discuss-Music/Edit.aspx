@@ -33,6 +33,13 @@
                 return false;
             }
 
+            else if (username == null || password == null || secondPassword == null || name == null || email == null || birthday == null || phoneNumber == null) {
+                alert("Please, fill all of the fields");
+            }
+
+            else if (!checkedValue)
+                return false;
+
             return true;
         }
       </script>

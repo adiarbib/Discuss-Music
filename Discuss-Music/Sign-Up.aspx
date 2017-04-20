@@ -14,10 +14,13 @@
 
             var form = document.forms["signUp"];
             var username = form["username"].value;
+            var name = form["name"].value;
             var password = form["password"].value;
             var secondPassword = form["secondPassword"].value;
             var phoneNumber = form["phoneNumber"].value;
             var checkedValue = form["checkBox"].checked;
+            var birthday = document.getElementById("birthday").value;
+            var email = form["email"].value;
 
             if (username.length < 8) {
                 alert("Username is too short");
@@ -41,6 +44,11 @@
 
             else if (!checkedValue)
                 return false;
+
+            else if (username == null || password == null || secondPassword == null || name == null || email == null || birthday == null || phoneNumber == null)
+            {
+                alert("Please, fill all of the fields");
+            }
 
             return true;
         }

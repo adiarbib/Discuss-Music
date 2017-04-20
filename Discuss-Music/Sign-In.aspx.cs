@@ -19,8 +19,6 @@ namespace Discuss_Music
             {
                 string username = Request.Form["username"];
                 string password = Request.Form["password"];
-
-                //when I press on sign in
                 SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
                 SqlCommand command = connection.CreateCommand();
@@ -45,7 +43,6 @@ namespace Discuss_Music
                 }
                 reader.Close();
                 connection.Close();
-
             }
         }
     }

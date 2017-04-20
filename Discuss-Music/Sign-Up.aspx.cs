@@ -28,8 +28,6 @@ namespace Discuss_Music
                     connection.Open();
                     SqlCommand command = connection.CreateCommand();
                     command.CommandText = String.Format("INSERT INTO People OUTPUT INSERTED.ID VALUES ('{0}','{1}','{2}','{3}','{4}','{5}');", username, password, phoneNumber, email, name, birthday);
-                    //if unique it may throw an exception
-
                     try
                     {
                         int userId = (int)command.ExecuteScalar();
@@ -38,19 +36,12 @@ namespace Discuss_Music
                         Response.Redirect("Feed.aspx");
                         
                     }
-
                     catch (SqlException)
                     {
                         message = "User already exist :(";
                     }
-
                     connection.Close();
-
-
                 }
-
-
-
             }
         }
     }
