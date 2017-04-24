@@ -36,7 +36,7 @@ namespace Discuss_Music
                     SqlConnection connection = new SqlConnection(connectionString);
                     connection.Open();
                     SqlCommand command = connection.CreateCommand();
-                    command.CommandText = String.Format("UPDATE People SET Username = '{0}',Password = '{1}',PhoneNumber = '{2}',Email = '{3}',Name = '{4}',Birthday = '{5}' WHERE Id = '" + Session["Id"] + "';", username, password, phoneNumber, email, name, birthday);
+                    command.CommandText = String.Format("UPDATE People SET Username = '{0}',Password = '{1}',PhoneNumber = '{2}',Email = '{3}',Name = '{4}',Birthday = '{5}' WHERE Id = '" + Session["Id"] + "';", username, password, phoneNumber, email, name, birthday.ToString("yyyy-MM-dd HH:mm:ss"));
                     try
                     {
                         command.ExecuteNonQuery();
@@ -60,7 +60,7 @@ namespace Discuss_Music
                 email = "Email";
                 name = "Guest";
                 birthday = DateTime.Now;
-                birthday_string = birthday.Year + "-" + birthday.Month + "-" + birthday.Day;
+                birthday_string = birthday.ToString("yyyy-MM-dd HH:mm:ss");
 
                 if (Session["Id"] != null)
                 {
@@ -78,8 +78,8 @@ namespace Discuss_Music
                         email = reader.GetString(4);
                         name = reader.GetString(5);
                         birthday = reader.GetDateTime(6);
-                        birthday_string = birthday.Year + "-" + birthday.Month + "-" + birthday.Day;
-                        
+                        birthday_string = birthday.ToString("yyyy-MM-dd HH:mm:ss");
+
                     }
                     reader.Close();
                     connection.Close();

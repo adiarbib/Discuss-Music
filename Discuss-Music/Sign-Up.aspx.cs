@@ -27,7 +27,7 @@ namespace Discuss_Music
                     SqlConnection connection = new SqlConnection(connectionString);
                     connection.Open();
                     SqlCommand command = connection.CreateCommand();
-                    command.CommandText = String.Format("INSERT INTO People OUTPUT INSERTED.ID VALUES ('{0}','{1}','{2}','{3}','{4}','{5}');", username, password, phoneNumber, email, name, birthday);
+                    command.CommandText = String.Format("INSERT INTO People OUTPUT INSERTED.ID VALUES ('{0}','{1}','{2}','{3}','{4}','{5}');", username, password, phoneNumber, email, name, birthday.ToString("yyyy-MM-dd HH:mm:ss"));
                     try
                     {
                         int userId = (int)command.ExecuteScalar();

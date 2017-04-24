@@ -43,7 +43,9 @@
             }
 
             else if (!checkedValue)
-                return false;
+            {
+                alert("In order to continue, you need to onfirm the terms checkbox");
+            }
 
             else if (username == null || password == null || secondPassword == null || name == null || email == null || birthday == null || phoneNumber == null)
             {

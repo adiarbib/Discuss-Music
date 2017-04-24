@@ -16,6 +16,7 @@ namespace Discuss_Music
         public string email;
         public string name;
         public DateTime birthday;
+        public string birthday_string;
         private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"|DataDirectory|\\CoolestDatabaseEver.mdf\";Integrated Security=True";
         public string insideBody = "";
 
@@ -29,6 +30,7 @@ namespace Discuss_Music
                 email = "Email";
                 name = "Guest";
                 birthday = DateTime.Now;
+                birthday_string = birthday.ToString("dd-MM-yyyy HH:mm:ss");
 
                 if (Session["Id"] != null)
                 {
@@ -47,6 +49,7 @@ namespace Discuss_Music
                         email = reader.GetString(4);
                         name = reader.GetString(5);
                         birthday = reader.GetDateTime(6);
+                        birthday_string = birthday.ToString("dd-MM-yyyy HH:mm:ss");
                     }
                     reader.Close();
 
@@ -87,10 +90,7 @@ namespace Discuss_Music
                 }
             }
 
-            else if(Request.HttpMethod == "POST")
-            {
-
-            }
+            
 
         }
     }

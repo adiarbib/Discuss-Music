@@ -33,7 +33,7 @@
     <h3>Password: <%=password %></h3>
     <h3>Phone Number: <%=phoneNumber %></h3>
     <h3>Email: <%=email %></h3>
-    <h3>Birthday: <%=birthday %></h3><br />
+    <h3>Birthday: <%=birthday_string %></h3><br />
     <h2>All Posts:</h2><br />
     <%=insideBody %>
 

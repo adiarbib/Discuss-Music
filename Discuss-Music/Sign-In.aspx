@@ -7,6 +7,23 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script>
+
+        function validateForm() {
+
+            var form = document.forms["signIn"];
+            var username = form["username"].value;
+            var password = form["password"].value;
+
+            if (username == null || password == null || secondPassword == null || name == null || email == null || birthday == null || phoneNumber == null)
+            {
+                alert("Please, fill all of the fields");
+            }
+
+            return true;
+        }
+        </script>
+
     <ul>
 
         <li><a href="Welcome.aspx">Introduction</a></li>
@@ -19,7 +36,7 @@
 
     <p><%=message %></p>
 
-    <form id="signIn" runat="server" onsubmit="return true" >
+    <form id="signIn" runat="server" onsubmit="return validateForm();" >
 
         <div class="container">
 

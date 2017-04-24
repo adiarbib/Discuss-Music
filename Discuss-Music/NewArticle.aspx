@@ -6,6 +6,23 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script>
+
+        function validateForm() {
+
+            var form = document.forms["newPost"];
+            var title = form["title"].value;
+            var content = form["content"].value;
+
+            if (title == null || contennt == null)
+            {
+                alert("Please, fill all of the fields");
+            }
+
+            return true;
+        }
+        </script>
+
     <ul>
 
         <li><a href="Feed.aspx">Feed</a></li>
