@@ -73,7 +73,9 @@
     <Content Include="Feed.aspx" />
     <Content Include="MyProfile.aspx" />
     <Content Include="NewArticle.aspx" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="MasterPage.Master" />
     <Content Include="Search.aspx" />
     <Content Include="Sign-In.aspx" />
